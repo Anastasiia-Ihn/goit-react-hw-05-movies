@@ -1,4 +1,4 @@
-import { fetchDataById } from 'API/apiById';
+import { fetchDataByValue } from 'API/apiByValue';
 import { ListTrends } from 'components/ListTrends/ListTrends';
 import { SearchByMovie } from 'components/SearchByMovie/SearchByMovie';
 import { useEffect, useState } from 'react';
@@ -20,13 +20,12 @@ export default function Movies() {
       setLoader(true);
 
       try {
-        const { results } = await fetchDataById(query, page);
+        const { results } = await fetchDataByValue(query, page);
         console.log(results.length);
 
         if (!results.length) {
           setError(true);
           toast.error('Sorry, not found');
-            
         }
 
         setListMovies(results);

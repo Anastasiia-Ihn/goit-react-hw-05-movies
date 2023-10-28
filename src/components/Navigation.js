@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const StyledLink = styled(NavLink)`
   &.active {
@@ -14,7 +14,6 @@ export const Navigation = () => {
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/movies">Movies</StyledLink>
       </nav>
-      {/* <Outlet /> */}
     </>
   );
 };
