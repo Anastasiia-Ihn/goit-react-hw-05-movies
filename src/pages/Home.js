@@ -2,8 +2,6 @@ import { fetchData } from 'API/api';
 import { ListTrends } from 'components/ListTrends/ListTrends';
 import { useEffect, useState } from 'react';
 
-// const fetch = async () => await fetchData();
-
 export default function HomePage() {
   const [arrMovies, setArrMovies] = useState([]);
 
@@ -19,7 +17,6 @@ export default function HomePage() {
     }
     fetchMovies();
 
-    // return () => {};
   }, []);
 
   return (

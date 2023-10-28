@@ -6,7 +6,6 @@ import { toast } from 'react-toastify';
 
 export default function MovieById() {
   const param = useParams();
-  // console.log(param); //'507089'
   const [movieEl, setMovieEl] = useState({});
 
   useEffect(() => {
